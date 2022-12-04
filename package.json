@@ -1,0 +1,24 @@
+{
+  "name": "bloginote-starter-template",
+  "description": "This repository is a starter template to build a static website with the BlogiNote theme.",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "keywords": [
+    "blog",
+    "note",
+    "markdown",
+    "nuxt",
+    "content",
+    "static",
+    "remark"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "bloginote": "2.4.0",
+    "nuxt": "npm:nuxt3@3.0.1-rc.0-27828744.aa9aec1"
+  }
+}
