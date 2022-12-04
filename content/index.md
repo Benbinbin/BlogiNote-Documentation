@@ -1,9 +1,9 @@
 ---
-title: Home
+title: BlogiNote Documentation
 ---
 
 ::IntroCard{avatar="/default-avatar.png"}
-# BlogiNote
+# BlogiNote Documentation
 
 BlogiNote is a website for showing your blogs and notes with flexible layouts and multiple optimizations.
 

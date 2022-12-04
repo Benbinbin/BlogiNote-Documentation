@@ -1,7 +1,3 @@
----
-head.description: 'This is a custom description for Content Wind about page.'
----
-
 # About
 
 This website is generate by BlogiNote, it can show your :IconCustom{name='logos:blogger'} blogs and :notebook: notes, because BlogiNote has flexible layouts and multiple optimizations for long or short content.
