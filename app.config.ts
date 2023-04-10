@@ -1,6 +1,6 @@
 // the alternative to Nuxt theme https://nuxt-themes.netlify.app/
 export default defineAppConfig({
-  theme: {
+  bloginote: {
     meta: {
       name: 'BlogiNote Documentation',
       description: 'The documentation of BlogiNote, which is a Nuxt theme.',
@@ -19,11 +19,10 @@ export default defineAppConfig({
     articlePage: {
       showTime: true,
       outdated: {
-        show: true,
+        show: false,
         threshold: 30
       },
-      showBlogCatalog: false,
-      showNoteCatalog: false
+      showCatalog: true
     }
   }
 })
