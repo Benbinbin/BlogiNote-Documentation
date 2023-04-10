@@ -15,6 +15,8 @@ If you want to try BlogiNote, click the following links:
 
 :bookmark_tabs: [Documentation](https://documentation.bloginote.benbinbin.com/)
 
+:package: [Github Repo](https://github.com/Benbinbin/BlogiNote)
+
 ## License
 
 [MIT](./LICENSE)
