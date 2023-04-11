@@ -1,4 +1,6 @@
 ---
+series: BlogiNote 使用教程
+seriesOrder: 4
 cover: ./images/interaction.jpg
 tags:
   - Chinese

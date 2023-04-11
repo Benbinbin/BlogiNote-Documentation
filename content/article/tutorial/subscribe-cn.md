@@ -1,4 +1,6 @@
 ---
+series: BlogiNote 使用教程
+seriesOrder: 6
 tags:
   - Chinese
 ---

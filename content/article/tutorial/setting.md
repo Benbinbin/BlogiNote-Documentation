@@ -1,4 +1,6 @@
 ---
+series: Tutorial For BlogiNote
+seriesOrder: 5
 tags:
   - English
 ---

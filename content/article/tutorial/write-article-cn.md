@@ -1,4 +1,6 @@
 ---
+series: BlogiNote 使用教程
+seriesOrder: 2
 cover: ./images/write.jpg
 tags:
   - Chinese
@@ -236,13 +238,6 @@ MDC 是 Markdown Components extended syntax 的缩写，表示 Markdown 组件�
 ::
 
 ## 添加封面
-
-::TipBox{type="说明"}
-有些小遗憾 :disappointed: BlogiNote [v3.1.0](https://github.com/Benbinbin/BlogiNote/releases/tag/v3.1.0) 并不支持为文章设置封面
-
-在后续版本可能对文章页面进行重新设计，之后应该会再重新支持为文章设置封面。
-::
-
 ::TipBox{type="tldr" name="概要"}
 在 Front Matter 中设置 `cover: image_file_path` 属性为文章添加封面
 ::

@@ -1,5 +1,6 @@
 ---
-articleType: note
+series: BlogiNote 使用教程
+seriesOrder: 1
 tags:
   - Chinese
 ---
@@ -10,7 +11,7 @@ tags:
 
 :IconCustom{name="ph:lightning-fill" iconClass="text-yellow-400"} 让我们开始吧 :IconCustom{name="ph:lightning-fill" iconClass="text-yellow-400"}
 
-## 构建开发环境（可选）
+## 构建开发环境
 
 ::TipBox{type="announce" name="可选步骤"}
 这部分的步骤是**可选的**。
@@ -103,7 +104,7 @@ tags:
 
 现在你对于这个副本仓库有完全的控制权，例如可以点击 [:IconCustom{name="octicon:settings-24" iconClass="w-4 h-4"} Settings]{.w-fit .px-2 .py-1 .inline-flex .items-center .gap-2 .text-xs .text-gray-600 .hover:bg-gray-100 .border .border-gray-300 .rounded .transition-colors .duration-300 .cursor-pointer} 标签，并在 `Repository name` 输入框中重命名该仓库的名称。
 
-### 下载模板（可选）
+### 下载模板
 
 ::TipBox{type="announce" name="可选步骤"}
 这部分的步骤是**可选的**。
@@ -186,7 +187,7 @@ yarn dev -o
 如果你想深入了解更多关于如何写文章的细节，可以查看另一个教程[写一篇文章](./write-article-cn)
 ::
 
-## 上传或同步更改
+## 同步更改
 
 在你写完新文章或更改完文章后，你应该将它们从本地上传或同步到远端的 Github 仓库中。
 
@@ -196,7 +197,7 @@ yarn dev -o
 
 * **通过 VS Code 提交更改**：VS Code 编辑器提供了优化的图形界面与 Git 配合工作，可以很方便地将更改从本地上传或同步到远端的 Github 仓库中。
 
-### 在 Github 网页中提交更改
+### 在 Github 提交更改
 如果你在电脑上没有[配置好开发环境](#构建开发环境可选)，那么你可以选择通过 Github 仓库页面来上传文章（markdown 文件）。
 
 点击仓库页面的 [Add file :IconCustom{name="material-symbols:arrow-drop-down" iconClass="w-4 h-4"}]{.w-fit .px-2.5 .py-1.5 .inline-flex .items-center .gap-2 .text-sm .text-white .font-bold .bg-green-500 .hover:bg-green-600 .rounded .transition-colors .duration-300 .cursor-pointer} 按钮，然后你会在弹出菜单里看到两个选项 `Create new file` 和 `Upload files`，按需要选择其中之一。

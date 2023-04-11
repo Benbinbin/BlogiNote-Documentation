@@ -1,4 +1,6 @@
 ---
+series: Tutorial For BlogiNote
+seriesOrder: 3
 tags:
   - English
 ---
@@ -215,6 +217,12 @@ TipBox support the following (optional) properties:
     ::::TabItem{name="bad"}
     ::::::TipBox{type="bad"}
     This is a bad practice
+    ::::::
+    ::::
+
+    ::::TabItem{name="tldr"}
+    ::::::TipBox{type="tldr"}
+    This is a summary
     ::::::
     ::::
     ::

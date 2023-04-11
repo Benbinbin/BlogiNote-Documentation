@@ -169,5 +169,5 @@ export default defineAppConfig({
 })
 ```
 
-Please checkout the article about [setting](./5.setting#app-config) for more information
+Please checkout the article about [setting](./setting#app-config) for more information
 ::

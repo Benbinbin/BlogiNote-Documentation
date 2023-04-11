@@ -1,4 +1,6 @@
 ---
+series: Tutorial For BlogiNote
+seriesOrder: 4
 cover: ./images/interaction.jpg
 tags:
   - English

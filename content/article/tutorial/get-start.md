@@ -1,5 +1,6 @@
 ---
-articleType: note
+series: Tutorial For BlogiNote
+seriesOrder: 1
 tags:
   - English
 ---
@@ -10,7 +11,7 @@ This tutorial will show your how to setup a project with BlogiNote step-by-step.
 
 :IconCustom{name="ph:lightning-fill" iconClass="text-yellow-400"} Let's Go :IconCustom{name="ph:lightning-fill" iconClass="text-yellow-400"}
 
-## Setup Environment (Optional)
+## Setup Environment
 
 ::TipBox{type="announce" name="Optional Step"}
 The steps in this part is **optional**.
@@ -62,7 +63,7 @@ If you wants to test or preview the web pages generated from markdown files loca
     This is an free online coding environment running the BlogiNote, it works right out of box :sunglasses: you create any new markdown files as you want, then the preview window on the right side will update simultaneously.
     ::
 
-## Register Github and Vercel Account
+## Register Github and Vercel
 
 1. Register a [Github](https://github.com/) account first:
 
@@ -85,7 +86,8 @@ If you wants to test or preview the web pages generated from markdown files loca
     ::TipBox{type="good" name="Recommend"}
     The more convenient way is to **Login** Vercel with the [:IconCustom{name="octicon:mark-github-16" iconClass="w-4 h-4"} Continue with Github]{.w-fit .px-4 .py-1 .inline-flex .items-center .gap-2 .text-sm .text-white .font-bold .bg-gray-800 .hover:bg-gray-600 .rounded .transition-colors .duration-300 .cursor-pointer} option.
     ::
-## Use the Starter Template
+
+## Use Starter Template
 The most easy way to build your own project is using the starter template of BlogiNote.
 
 ::TipBox{type="warning"}
@@ -101,7 +103,7 @@ Then you will create a copy of the repository under your Github account.
 
 Now you have full control over this duplicated repository, for example you can click the [:IconCustom{name="octicon:settings-24" iconClass="w-4 h-4"} Settings]{.w-fit .px-2 .py-1 .inline-flex .items-center .gap-2 .text-xs .text-gray-600 .hover:bg-gray-100 .border .border-gray-300 .rounded .transition-colors .duration-300 .cursor-pointer} tab, and rename your repository in the `Repository name` input box.
 
-### Download Template (Optional)
+### Download Template
 
 ::TipBox{type="announce" name="Optional Step"}
 The steps in this part is **optional**.
@@ -133,7 +135,7 @@ Then you will see a pop-up menu with some options to Clone/Download the code to 
 
 * Another way is just clicking the [:IconCustom{name="octicon:file-zip-24" iconClass="w-4 h-4"} Download ZIP]{.w-fit .p-1 .inline-flex .items-center .gap-2 .text-xs .text-gray-600 .hover:bg-gray-100 .border .border-gray-300 .rounded .transition-colors .duration-300 .cursor-pointer} option to download a ZIP file, then Unzip it
 
-## Run Locally (Optional)
+## Run Locally
 
 ::TipBox{type="announce" name="Optional Step"}
 The steps in this part is **optional**.
@@ -215,7 +217,7 @@ Create any markdown files in the :file_folder: `content/article` folder to write
 If you want to learn more about how to write an article, please check out another tutorial [Write an article](./write-article)
 ::
 
-## Upload or Sync Changes
+## Upload Changes
 After you finish writing or editing the articles, you should upload or sync the changes from the your local PC to the remote Github repository.
 
 There're many methods or tools to commit changes, and this tutorial will show you two ways:
@@ -224,7 +226,7 @@ There're many methods or tools to commit changes, and this tutorial will show yo
 
 * **Commit Changes by VS Code**: VS Code work well with Git and support to commit changes from local PC to the remote Github repository.
 
-### Commit Changes at Github Webpage
+### Commit Changes at Github
 If you don't [setup the development environment](#setup-environment-optional) at your local PC, you can upload the articles (the markdown files) you have wrote to Github at the repository webpage.
 
 Click the [Add file :IconCustom{name="material-symbols:arrow-drop-down" iconClass="w-4 h-4"}]{.w-fit .px-2.5 .py-1.5 .inline-flex .items-center .gap-2 .text-sm .text-white .font-bold .bg-green-500 .hover:bg-green-600 .rounded .transition-colors .duration-300 .cursor-pointer} button at the repository page, then you will see a pop-up menu with two options `Create new file` and `Upload files`, choose one option.
@@ -269,7 +271,7 @@ At the bottom of this page, there's **a dialog called `Commit changes`**, you sh
 
 ![Commit Changes](./images/commit-changes.png)
 
-### Commit Changes by VS Code
+### Commit Changes by VSCode
 If you has setup environment, you can use VS Code to commit changes to the remote Github repository.
 
 VS Code provides a sidebar for you to commit changes to Github repository, it's convenient and you just need to click some buttons.
@@ -325,15 +327,3 @@ It means each time you upload the new blog article to the Github repository, you
 
 Yep :IconCustom{name="twemoji:partying-face"} so easy
 ::
-
-<!-- ## Setup VSCode Editor
-
-## code highlight
-
-if you want to change code highlight color theme, you can change the property of :page_facing_up: `nuxt.config.ts` file
-
-3. change the highlight color theme for code
-
-4. set the preload programming language for code highlight
-
-if you want to custom some parts of the project, please keep reading -->

@@ -1,4 +1,6 @@
 ---
+series: BlogiNote 使用教程
+seriesOrder: 3
 tags:
   - Chinese
 ---
@@ -211,6 +213,12 @@ TipBox 支持一些（可选的）属性：
     ::::TabItem{name="bad"}
     ::::::TipBox{type="bad"}
     这是一个不推荐的坏习惯
+    ::::::
+    ::::
+
+    ::::TabItem{name="tldr"}
+    ::::::TipBox{type="tldr"}
+    这是一个总结
     ::::::
     ::::
     ::

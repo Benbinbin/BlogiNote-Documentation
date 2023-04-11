@@ -1,4 +1,6 @@
 ---
+nextArticleName: Get Start
+nextArticleUrl: ./get-start
 tags:
   - English
 ---

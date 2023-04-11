@@ -172,5 +172,5 @@ export default defineAppConfig({
 })
 ```
 
-请查看另一篇文章《[设置](./12.setting-cn#app-config)》了解更多
+请查看另一篇文章《[设置](./setting-cn#app-config)》了解更多
 ::
