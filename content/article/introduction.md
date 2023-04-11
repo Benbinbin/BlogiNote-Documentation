@@ -1,6 +1,6 @@
 ---
 nextArticleName: Get Start
-nextArticleUrl: ./get-start
+nextArticleUrl: ./tutorial/get-start
 tags:
   - English
 ---

@@ -1,6 +1,6 @@
 ---
 nextArticleName: 着手开始
-nextArticleUrl: ./get-start-cn
+nextArticleUrl: ./tutorial/get-start-cn
 tags:
   - Chinese
 ---
