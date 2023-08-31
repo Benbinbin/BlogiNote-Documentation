@@ -98,11 +98,11 @@ BlogiNote 可以解析三种类型的文件内容生成网页页面，它们分�
 
 它是指位于 markdown 文件的顶部，并用两条 `---`（三横线）包裹的内容，这些内容使用 YAML 语法编写，可以为文章添加一些元信息
 
-[YAML 或 YML](https://yaml.org/) 是一种特殊的语法，它的内容使用一系列的 `key: value` 键值对，例如在本文所对应的 markdown 文件就有一个 `cover: ./images/write.jpg` 键值对用于设置文章的封面。
+[YAML 或 YML](https://yaml.org/) 是一种特殊的语法，它的内容使用一系列的 `key: value` 键值对，例如在本文所对应的 markdown 文件的 Front Matter 中，就有一个键值对 `cover: ./images/write.jpg` 用于设置文章的封面。
 
 在 markdown 文件解析生成网页后，这些 metadata 信息并不像显示在网页上，所以不需要担心添加在顶部的 Front Matter 将文章「弄乱」
 
-具体介绍可以查看[另一篇文章](./setting-cn#front-matter)
+在另一篇[文章](./setting-cn#front-matter)中总结了 BlogiNote 所使用的一些特殊 Front Matter 属性，通过它们可以配置文章界面和交互行为
 ::
 
 以下部分将会介绍一些在书写 markdown 文件时值得注意的细节：
@@ -239,7 +239,7 @@ MDC 是 Markdown Components extended syntax 的缩写，表示 Markdown 组件�
 这些方式的优先级顺序是 Front Matter 的 `title` 属性 > 第一级标题 > 文件名称
 
 ::TipBox{type="tip" name="提示"}
-关于 Front Matter 的具体介绍可以查看[另一篇文章](./setting-cn#front-matter)
+关于 Front Matter 的介绍可以查看[上一个小节](#markdown)
 ::
 
 一般推荐使用文章的第一级标题作为文章的标题，这也是符合直觉的。
@@ -258,7 +258,7 @@ MDC 是 Markdown Components extended syntax 的缩写，表示 Markdown 组件�
 文章的封面会显示在文章页面的顶部，以及首页的文章列表条目的右下角
 
 ::TipBox{type="tip" name="提示"}
-关于 Front Matter 的具体介绍可以查看[另一篇文章](./setting-cn#front-matter)
+关于 Front Matter 的介绍可以查看[上一个小节](#markdown)
 ::
 
 按照以下步骤为文章设置封面，可以使用项目中的本地图片或在线的图片：
@@ -296,10 +296,14 @@ MDC 是 Markdown Components extended syntax 的缩写，表示 Markdown 组件�
 
 另外在文章列表页面 `https://your.domain.com/list` 也可以根据标签和系列对文章进行快速的分类检索
 
-### 添加标签
+### 标签
 在 Front Matter 中设置 `tags` 属性为文章添加标签，它的值是数组，所以可以为一篇文章添加多个标签
 
 在 YAML 语法中如果一个属性的值是一个数组，则需要另起一行再罗列出其中的各个元素。而且在每个元素前需要带有缩进（即段落的首部至少有两个空格），并 `-` 短横线作为开始标识，与后随的具体的值之间用空格间隔
+
+::TipBox{type="tip" name="提示"}
+关于 Front Matter 的介绍可以查看[上一个小节](#markdown)
+::
 
 例如添加 `笔记`、`博客` 两个标签，则在文章顶部的 Front Matter 中进行如下设置
 
@@ -311,14 +315,14 @@ tags:
 ---
 ```
 
-::TipBox{type="tip" name="提示"}
-关于 Front Matter 的具体介绍可以查看[另一篇文章](./setting-cn#front-matter)
-::
-
-### 指定系列
+### 系列
 在 Front Matter 中设置 `series` 属性为文章指定所属的系列
 
 还可以在 Front Matter 中设置 `seriesOrder` 属性指定当前文章在系列中的排序
+
+::TipBox{type="tip" name="提示"}
+关于 Front Matter 的介绍可以查看[上一个小节](#markdown)
+::
 
 例如将文章指定为 `BlogiNote 使用教程` 系列，且排序为 `2`，则在文章顶部的 Front Matter 中进行如下设置
 
@@ -336,9 +340,13 @@ seriesOrder: 2
 
 * 在 Front Matter 中设置 `prevArticleName` 和 `prevArticleUrl` 属性为文章指定上一篇**文章的名称**和**文件路径**（（使用相对路径，省略文件后缀 `.md`）
 
+::TipBox{type="tip" name="提示"}
+关于 Front Matter 的介绍可以查看[上一个小节](#markdown)
+::
+
 例如要为当前文章指定上一篇文章，文章名称为 `简介`，该文章所对应的 markdown 文件是 `introduction-cn.md`
 
-由于当前文章的绝对路径是 `项目根目录/content/article/tutorial/write-article-cn.md` 而上一篇文章的绝对路径是 `项目根目录/content/article/introduction-cn.md`，所以上一篇文章相对于当前文章的**相对路径**是 `../introduction-cn`
+由于当前文章的绝对路径是 `项目根目录/content/article/tutorial/write-article-cn.md` 而上一篇文章的绝对路径是 `项目根目录/content/article/introduction-cn.md`，所以上一篇文章（相对于当前文章的）**相对路径**是 `../introduction-cn`
 
 则在文章顶部的 Front Matter 中进行如下设置
 
@@ -366,4 +374,8 @@ prevArticleUrl: ../introduction-cn
 文章的「过期」阈值默认值是 `30` 天，可以在 `app.config.ts` 项目配置文件中进行修改
 
 关于使用文件 `app.config.ts` 配置项目的介绍可以参考这一篇[文章](./setting-cn#app-config)
+::
+
+::TipBox{type="tip" name="提示"}
+关于 Front Matter 的介绍可以查看[上一个小节](#markdown)
 ::

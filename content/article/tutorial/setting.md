@@ -101,16 +101,30 @@ We won't see this metadata after the markdown file convert to the website page. 
 It is written in a special format called [YAML or YML](https://yaml.org/), this format is make up of a list of `key: value` pairs.
 ::
 
-There are some properties you can use to set the page:
+There are some properties you can use to configure the page interface and interactive behavior:
 
-* **[`showCatalog`]{.text-purple-500} property** is used to set whether to display the catalog of the article at initial state (when the page open first) at "note" mode
+* **[`title`]{.text-purple-500} property** is used to set the title of article
 
-  the default value is `showCatalog: false` that means the catalog of an article **won't** show
+* **[`cover`]{.text-purple-500} property** is used to set the cover of the article
 
-* **[`showTime`]{.text-purple-500} property** is used to set whether to display the timestamp of an article (the created time and the last updated time)
+* **[`nextArticleName`]{.text-purple-500} 和 [`nextArticleUrl`]{.text-purple-500} property** is used to set the **title** and the **file path** of the next relative article (use the relative path, and ignore the file extension `.md`)
 
-  the default value is `showTime: true` that means the timestamp will show
+* **[`prevArticleName`]{.text-purple-500} and [`prevArticleUrl`]{.text-purple-500} property** is used to set the **title** and the **file path** of the previous relative article (use the relative path, and ignore the file extension `.md`)
 
-* **[`outdated.show`]{.text-purple-500} and [`outdated.threshold`]{.text-purple-500} these two properties** are used to set whether to display outdated warning of the article, and the outdated days threshold.
+* **[`series`]{.text-purple-500} property** is used to set the specific series that the article belongs to
 
-    the default value is `30` that means the outdated warning will show and the article outdated days threshold is 30 days (after it created or the latest updated time).
+* **[`tags`]{.text-purple-500} property** is used to set the tags for the article, the value is an array, allowing you to add multiple tags to an article.
+
+* **[`showCatalog`]{.text-purple-500} property** is used to set whether the table of contents of the article is displayed by default (when the article page is first opened), the value can be set as `true` or `false`
+
+* **[`created`]{.text-purple-500} property** is used to set the creation time of the article, the value should be a date in the format `YYYY-MM-DD`, for example `2023-02-01`
+
+* **[`updated`]{.text-purple-500} property** is used to set the updated time of the article, the value should be a date in the format `YYYY-MM-DD`, for example `2023-02-01`
+
+* **[`showTime`]{.text-purple-500} property** is used to set whether to display the timestamp of an article (the created time and the last updated time), the value can be set as `true` or `false`
+
+* **[`showOutdatedWarning`]{.text-purple-500} property** is used to set whether to display a warning about the timeliness of the article when it is being viewed, the value can be set as true or false.
+
+::TipBox{type="tip"}
+Refer to [this article](./write-article) for specific information and configuration examples of each Front Matter property mentioned above
+::

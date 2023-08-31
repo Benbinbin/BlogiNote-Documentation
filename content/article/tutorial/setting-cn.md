@@ -108,7 +108,9 @@ Front Matter 使用一种称为 [YAML 或 YML](https://yaml.org/) 的语法来�
 
 * **[`cover`]{.text-purple-500} 属性**用于设置文章的封面
 
-* **[`nextArticleName`]{.text-purple-500} 和 [`nextArticleUrl`]{.text-purple-500} 属性**用于设置当前文章的下一篇关联文章的**文章**和**文件路径**（使用相对路径，省略文件后缀 `.md`），而 **[`prevArticleName`]{.text-purple-500} 和 [`prevArticleUrl`]{.text-purple-500} 属性**则用于设置当前文章的上一篇关联文章的**文章**和**文件路径**（使用相对路径，省略文件后缀 `.md`）
+* **[`nextArticleName`]{.text-purple-500} 和 [`nextArticleUrl`]{.text-purple-500} 属性**用于设置当前文章的下一篇关联文章的**标题**和**文件路径**（使用相对路径，省略文件后缀 `.md`）
+
+*  **[`prevArticleName`]{.text-purple-500} 和 [`prevArticleUrl`]{.text-purple-500} 属性**则用于设置当前文章的上一篇关联文章的**文章**和**文件路径**（使用相对路径，省略文件后缀 `.md`）
 
 * **[`series`]{.text-purple-500} 属性**用于设置文章指定所属的系列
 
@@ -125,5 +127,5 @@ Front Matter 使用一种称为 [YAML 或 YML](https://yaml.org/) 的语法来�
 * **[`showOutdatedWarning`]{.text-purple-500} 属性**用于设置是否显示文章时效性警告，其值为 `true` 或 `false`
 
 ::TipBox{type="tip" name="提示"}
-各个 Front Matter 属性的作用和配置具体可以参考这一篇[文章](./write-article-cn)
+以上各个 Front Matter 属性的作用和配置具体可以参考这一篇[文章](./write-article-cn)
 ::

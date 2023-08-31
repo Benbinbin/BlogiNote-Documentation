@@ -41,6 +41,13 @@ const languageColorMap = {
 }
 ```
 
+## Tip Boxes
+[:IconCustom{name="majesticons:cursor-click"} Click]{.text-purple-500} on the icon or title at the top left corner of a TipBox to **expand or collapse** the content.
+
+::TipBox{type="tip"}
+Clicking on the icon or title above :point_up: will expand or collapse this section
+::
+
 ## Image
 
 ![interaction](./images/interaction.jpg)

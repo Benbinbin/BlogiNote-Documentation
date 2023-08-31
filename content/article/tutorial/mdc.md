@@ -138,8 +138,6 @@ This is an example TipBox
 ::::
 ::
 
-
-
 TipBox support the following (optional) properties:
 
 * **[`type`]{.text-purple-500} property**: there are some build-in types for special use cases
@@ -269,51 +267,66 @@ TipBox support the following (optional) properties:
     ::::
     ::
 
-* there are some properties for styling the TipBox background color, text color or border color
+* **[`boxStyle`]{.text-purple-500} property**: set the CSS Style for the TipBox container
 
-    * **[`bgColorStyle`]{.text-purple-500} property**
-    * **[`textColorStyle`]{.text-purple-500} property**
-    * **[`borderColorStyle`]{.text-purple-500} property**
+there are some properties for styling the TipBox background color, text color or border color
 
-    the value of these properties should be a string represented the [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) in CSS.
-
-    For example setting a colorful TipBox with orange (use the hex format) background, white (use the name of the color) text and blue (use the rgba format) border
+    For example setting a colorful TipBox with orange (use the hex format) background `background-color: #ffa500`, white (use the name of the color) text `color: white` and blue (use the rgba format) border `border-color: rgba(0, 0, 255, 1)`
 
     ::TabGroup
     ::::TabItem{name="Result"}
-    ::::::TipBox{bgColorStyle="#ffa500" textColorStyle="white" borderColorStyle="rgba(0, 0, 255, 1)"}
+    ::::::TipBox{boxStyle="background-color: #ffa500; color: whit; border-color: rgba(0, 0, 255, 1)"}
     a colorful TipBox
     ::::::
     ::::
 
     ::::TabItem{name="Markdown"}
     ```md
-    ::TipBox{bgColorStyle="#ffa500" textColorStyle="white" borderColorStyle="rgba(0, 0, 255, 1)"}
+    ::TipBox{boxStyle="background-color: #ffa500; color: whit; border-color: rgba(0, 0, 255, 1)"}
     a colorful TipBox
     ::
     ```
     ::::
     ::
 
-    BlogiNote support Tailwind CSS, so you can also use the [color utility class](https://tailwindcss.com/docs/customizing-colors) in Tailwind CSS as the value for the following properties
 
-    * **[`bgColorClass`]{.text-purple-500} property**
-    * **[`textColorClass`]{.text-purple-500} property**
-    * **[`borderColorClass`]{.text-purple-500} property**
+* **[`boxClass`]{.text-purple-500} property**: set the CSS Class for the TipBox container
+
+    BlogiNote support [Tailwind CSS](https://tailwindcss.com), so you can also use it to set the style of the TipBox
 
     For example setting a similar colorful TipBox as above
 
     ::TabGroup
     ::::TabItem{name="Result"}
-    ::::::TipBox{bgColorClass="bg-orange-400" textColorClass="text-white" borderColorClass="border-blue-500"}
+    ::::::TipBox{boxClass="bg-orange-400 text-white border-blue-500"}
     a colorful TipBox
     ::::::
     ::::
 
     ::::TabItem{name="Markdown"}
     ```md
-    ::TipBox{bgColorClass="bg-orange-400" textColorClass="text-white" borderColorClass="border-blue-500"}
+    ::TipBox{boxClass="bg-orange-400 text-white border-blue-500"}
     a colorful TipBox
+    ::
+    ```
+    ::::
+    ::
+
+* **[open]{.text-purple-500} property**: set whether the TipBox is initially expanded or collapsed (this only sets the initial state of the TipBox when the page is first loaded. You can still manually expand or collapse the content of TipBox by clicking the icon or title at the top-right corner of the TipBox).
+
+    The default initial state is expanded, which is setting the property as `open="true"`. The following TipBox will have initial state set to collapsed.
+
+    ::TabGroup
+    ::::TabItem{name="Result"}
+    ::::::TipBox{type="tip" open="false"}
+    this TipBox initial state is collapsed
+    ::::::
+    ::::
+
+    ::::TabItem{name="Markdown"}
+    ```md
+    ::TipBox{type="tip" open="false"}
+    this TipBox initial state is collapsed
     ::
     ```
     ::::

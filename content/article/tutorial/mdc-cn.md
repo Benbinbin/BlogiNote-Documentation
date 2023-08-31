@@ -66,7 +66,7 @@ BlogiNote 提供了一些内置的 MDC，这个教程会向你介绍如何使用
 
 每一个块状 MDC `TabItem` 所包含的就是包含一个标签页，它有一个可选的 **[`name`]{.text-purple-500} 属性**用于设置标签的名称（默认值为 `Tab`），会展示在组件的顶部。
 
-这个 MDC 是为了可以并排显示不同的内容而设计的，我将会用它来演示如何书写 markdown（在  `Markdown` 标签里）以及解析的结果（在 `Tab` 标签里），就是这样：
+这个 MDC 是为了可以并排显示不同的内容而设计的，我将会用它来演示如何书写 markdown（在 `Markdown` 标签里）以及解析的结果（在 `Tab` 标签里），就是这样：
 
 ::TabGroup
 ::::TabItem{name="Result"}
@@ -265,55 +265,67 @@ TipBox 支持一些（可选的）属性：
     ::::
     ::
 
-* 还有一些属性用于设置 TipBox 的背景色、字体颜色或边框颜色
+* **[`boxStyle`]{.text-purple-500} 属性**：为提示框的容器添加 CSS Style 行内样式
 
-    * **[`bgColorStyle`]{.text-purple-500} 属性**
-    * **[`textColorStyle`]{.text-purple-500} 属性**
-    * **[`borderColorStyle`]{.text-purple-500} 属性**
-
-    这些属性的值是一个在 CSS 中表示颜色的字符串。
-
-    例如将 TipBox 的背景色设置为橙色（采用 hex 模式），字体颜色设置为白色（采用颜色的名称），边框颜色设置为蓝色（采用 rgba 模式）
+    例如将 TipBox 的背景色设置为橙色（采用 hex 模式）`background-color: #ffa500`，字体颜色设置为白色（采用颜色的名称）`color: white`，边框颜色设置为蓝色（采用 rgba 模式）`border-color: rgba(0, 0, 255, 1)`
 
     ::TabGroup
     ::::TabItem{name="Result"}
-    ::::::TipBox{bgColorStyle="#ffa500" textColorStyle="white" borderColorStyle="rgba(0, 0, 255, 1)"}
+    ::::::TipBox{boxStyle="background-color: #ffa500; color: whit; border-color: rgba(0, 0, 255, 1)"}
     这是一个彩色 TipBox
     ::::::
     ::::
 
     ::::TabItem{name="Markdown"}
     ```md
-    ::TipBox{bgColorStyle="#ffa500" textColorStyle="white" borderColorStyle="rgba(0, 0, 255, 1)"}
+    ::TipBox{boxStyle="background-color: #ffa500; color: whit; border-color: rgba(0, 0, 255, 1)"}
     这是一个彩色 TipBox
     ::
     ```
     ::::
     ::
 
-    BlogiNote 支持 Tailwind CSS，所以你可以用 Tailwind CSS 的[颜色基础类](https://tailwindcss.com/docs/customizing-colors)作为以下这些属性的值
+* **[`boxClass`]{.text-purple-500} 属性**：为提示框的容器添加 CSS Class 类名
 
-    * **[`bgColorClass`]{.text-purple-500} 属性**
-    * **[`textColorClass`]{.text-purple-500} 属性**
-    * **[`borderColorClass`]{.text-purple-500} 属性**
+    BlogiNote 支持 [Tailwind CSS](https://tailwindcss.com)，所以可以用它来设置提示框的样式
 
     例如设置一个类似上一个例子的 TipBox
 
-::TabGroup
-::::TabItem{name="Result"}
-::::::TipBox{bgColorClass="bg-orange-400" textColorClass="text-white" borderColorClass="border-blue-500"}
-这是一个彩色 TipBox
-::::::
-::::
+    ::TabGroup
+    ::::TabItem{name="Result"}
+    ::::::TipBox{boxClass="bg-orange-400 text-white border-blue-500"}
+    这是一个彩色 TipBox
+    ::::::
+    ::::
 
-::::TabItem{name="Markdown"}
-```md
-::TipBox{bgColorClass="bg-orange-400" textColorClass="text-white" borderColorClass="border-blue-500"}
-这是一个彩色 TipBox
-::
-```
-::::
-::
+    ::::TabItem{name="Markdown"}
+    ```md
+    ::TipBox{boxClass="bg-orange-400 text-white border-blue-500"}
+    这是一个彩色 TipBox
+    ::
+    ```
+    ::::
+    ::
+
+* **[`open`]{.text-purple-500} 属性**：设置提示框初始状态是展开还是收起（这里设置的只是初始化，即页面首次加载时，提示框的状态，可以点击提示框的左上角的图标或标题手动展开或收起提示框的内容）
+
+    默认的初始状态是展开，即将属性设置为 `open="true"`，以下的提示框将初始状态设置为收起
+
+    ::TabGroup
+    ::::TabItem{name="Result"}
+    ::::::TipBox{type="tip" open="false"}
+    这个提示框的初始状态为「收起」
+    ::::::
+    ::::
+
+    ::::TabItem{name="Markdown"}
+    ```md
+    ::TipBox{type="tip" open="false"}
+    这个提示框的初始状态为「收起」
+    ::
+    ```
+    ::::
+    ::
 
 ## ImageList
 

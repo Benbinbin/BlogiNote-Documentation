@@ -93,6 +93,26 @@ Because Markdown provides some useful syntax rules to mark the plain text conten
 
 Most of the time, you will write a blog post in markdown file, BlogiNote support basic Markdown syntax and MarkDown Components extended syntax (also called [MDC](https://content.nuxtjs.org/guide/writing/mdc/) for short).
 
+::TipBox{type="tip"}
+除了 Markdown 的基础语法，还需要了解一个相关的概念 Front Matter
+
+它是指位于 markdown 文件的顶部，并用两条 `---`（三横线）包裹的内容，这些内容使用 YAML 语法编写，可以为文章添加一些元信息
+
+[YAML 或 YML](https://yaml.org/) 是一种特殊的语法，它的内容使用一系列的 `key: value` 键值对，例如在本文所对应的 markdown 文件就有一个 `cover: ./images/write.jpg` 键值对用于设置文章的封面。
+
+在 markdown 文件解析生成网页后，这些 metadata 信息并不像显示在网页上，所以不需要担心添加在顶部的 Front Matter 将文章「弄乱」
+
+在另一篇[文章](./setting-cn#front-matter)中总结了 BlogiNote 所使用的一些特殊 Front Matter 属性，通过它们可以配置文章界面和交互行为
+
+Front Matter is a concept related to Markdown, which refers to the content located at the top of a Markdown file and is enclosed by two sets of `---` (three hyphens). This content is written using YAML syntax and allows you to add metadata to hte article.
+
+[YAML or YML](https://yaml.org/) is a special syntax that uses a series of `key: value` pairs. For example, in the Front Matter of the Markdown file corresponding to this page, there is a key-value pair `cover: ./images/write.jpg` used to set the cover image for the article.
+
+After parsing the Markdown file and generating the webpage, these metadata information is not displayed on the webpage, so there is no need to worry about the Front Matter at the top of the file affecting the article's appearance.
+
+In [another article](./setting#front-matter), there is a summary of some special Front Matter properties used in BlogiNote, you can configure the article's interface and interactive behavior by setting them.
+::
+
 The following parts will show some details you should pay attention to when writing markdown file:
 
 #### link
@@ -223,6 +243,10 @@ There are many ways to set the article title:
 
 the priority level is `title` property > the level 1 heading > file name
 
+::TipBox{type="tip"}
+The introduction to Front Matter can be found in [the previous section](#markdown).
+::
+
 Most of the time you only need to write a level 1 heading at the begin of the article (if your article has some Front Matter content, the level 1 heading should be follow the Front Matter).
 
 If you don't want to write the level 1 heading at the top of the article, and you don't like the file name as the article title, you can provide the `title` property at Front Matter to rewrite the title of the article.
@@ -232,27 +256,17 @@ Please don't provide the `title` property and the level 1 heading at the same ti
 ::
 
 ::TipBox{type="announce"}
-the url of the article is always based on the file system path and the file name.
+the url of the article is always based on the file system path and the file name (rather than the article title).
 ::
 
 ## Add a cover
-::TipBox{type="tldr"}
-Add the `cover: image_file_path` property in Front Matter at the top of your markdown file
-::
-
-<!-- Open the :page_facing_up: `/content/article/tutorial/write-article.md` file in this project, you maybe notice at the top of this article there're `---` three dashes -->
-
-::TipBox{type="announce"}
-We add some metadata for page by add some YAML within `---` three dashes at the top of the article, this's also called Front Matter.
-
-We won't see this metadata after the markdown file convert to the website page. So you shouldn't worry about the "dirty" header will make the article in a mess.
-
-It is written in a special format called [YAML or YML](https://yaml.org/), this format is make up of a list of `key: value` pairs, for example in this project, you can add `cover: ./images/write.jpg` to set a cover for this article.
-::
+use the Front Matter property `cover: image_file_path` to set a cover image for the article
 
 ::TipBox{type="tip"}
-The image will be shown at the top of the article and the right corner of home page article list item.
+The introduction to Front Matter can be found in [the previous section](#markdown).
 ::
+
+The image will be shown at the top of the article and the right corner of home page article list item.
 
 You can use the local image or remote image as the cover:
 
@@ -280,6 +294,93 @@ You can use the local image or remote image as the cover:
 
     So I just need to add `cover: https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ` at the top of this article within `---` three dashes
 
+## Article Categorization
+You have the option to add tags or specify a series for the articles. These tags or series will be displayed below the title on the article page, and they can be interacted.
 
+For instance, if you assign a series to an article, a button with the series name will appear below the article title. Clicking on this button will open a window listing all the articles belonging to that series.
 
+Furthermore, on the article list page at `https://your.domain.com/list`, you can quickly sort and retrieve articles based on tags and series.
 
+### tags
+Set the `tags` property in the Front Matter to add tags to the article. Its value should be an array, so multiple tags can be added to an article.
+
+In YAML syntax, if a property's value is an array, it needs to be listed on a separate line. Each element should be indented (with at least two spaces at the beginning of the line) and preceded by a hyphen `-` as a marker, with a space between the marker and the specific value.
+
+::TipBox{type="tip"}
+The introduction to Front Matter can be found in [the previous section](#markdown).
+::
+
+For example, to add the tags "note" and "blog", you would set the Front Matter at the top of the article as follows:
+
+```md
+---
+tags:
+  - note
+  - blog
+---
+```
+
+### series
+Set the `series` property in the Front Matter to specify the series to which the article belongs to.
+
+You can also set the `seriesOrder` attribute in the Front Matter to determine the article's order in the series.
+
+::TipBox{type="tip"}
+The introduction to Front Matter can be found in [the previous section](#markdown).
+::
+
+For example, to assign the article to the series `tutorial for BlogiNote` and set its order as `2`, you would add the following to the Front Matter at the top of the article:
+
+```md
+---
+series: tutorial for BlogiNote
+seriesOrder: 2
+---
+```
+
+## Related articles
+You can set two related articles for the current article, which will be displayed at the top and bottom of the article page. Clicking on the respective buttons will navigate to the related articles.
+
+* Set the `nextArticleName` and `nextArticleUrl` attributes in the Front Matter to specify the **name** and **file path** (using relative paths, ignoring the file extension `.md`) of the next article.
+
+* Set the `prevArticleName` and `prevArticleUrl` attributes in the Front Matter to specify the **name** and **file path** (using relative paths, ignoring the file extension `.md`) of the previous article.
+
+::TipBox{type="tip"}
+The introduction to Front Matter can be found in [the previous section](#markdown).
+::
+
+For example, to specify the previous article with the name `introduction` and the markdown file path `introduction.md`
+
+As the absolute path of the current article is `root/content/article/tutorial/write-article.md` and the absolute path of the previous article is `root/content/article/introduction.md`, the relative path of the previous article (with respect to the current article) is `../introduction`
+
+you would set the following in the Front Matter at the top of the article:
+
+```md
+---
+prevArticleName: introduction
+prevArticleUrl: ../introduction
+---
+```
+
+::TipBox{type="announce"}
+For articles has set a series which its belongs to, the program will automatically set the previous and next article based on the order of the articles in the series.
+
+You can also manually set the Front Matter properties which mentioned earlier for the current article to override the automatically generated related articles.
+::
+
+## Set time
+Set the `created` or `updated` properties in the Front Matter to specify the creation and update time of the article, respectively. The time format should be `YYYY-MM-DD`, for example, `2023-02-01`.
+
+Set the `showTime` property in the Front Matter with a value of `true` or `false` to indicate whether to display the timestamp on the article page.
+
+You can also set the `showOutdatedWarning` property in the Front Matter with a value of `true` or `false` to enable or disable the expiration warning for the article, to alert users about the timeliness of the content.
+
+::TipBox{type="tip"}
+The default threshold for an article to be considered "expired" is `30` days, but you can modify this in the project configuration file `app.config.ts`
+
+For information on configuring the project using the `app.config.ts` file, you can refer to [this article](./setting#app-config).
+::
+
+::TipBox{type="tip"}
+The introduction to Front Matter can be found in [the previous section](#markdown).
+::

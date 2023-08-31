@@ -41,6 +41,13 @@ const languageColorMap = {
 }
 ```
 
+## 提示框
+[:IconCustom{name="majesticons:cursor-click"} 点击]{.text-purple-500}提示框左上角的图表或标题，以**展开或收起**提示内容。
+
+::TipBox{type="tip" name="提示"}
+点击 :point_up: 上面的图标或标题可以展开或收起这一段内容
+::
+
 ## 图片
 
 ![交互](./images/interaction.jpg)
