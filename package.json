@@ -17,6 +17,6 @@
   "license": "MIT",
   "devDependencies": {
     "bloginote": "3.2.1",
-    "nuxt": "nuxt"
+    "nuxt": "3.6.1"
   }
 }
