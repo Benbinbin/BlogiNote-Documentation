@@ -13,7 +13,7 @@ If you want to try BlogiNote, click the following links:
 
 :pencil: [Starter Template](https://github.com/Benbinbin/BlogiNote-Starter-Template)
 
-:bookmark_tabs: [Documentation](https://blogi-note-documentation.vercel.app/)
+:bookmark_tabs: [Documentation](https://bloginote-documentation.vercel.app/)
 
 :package: [Github Repo](https://github.com/Benbinbin/BlogiNote)
 

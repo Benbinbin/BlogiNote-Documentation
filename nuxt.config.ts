@@ -13,8 +13,8 @@ export default defineNuxtConfig({
     rss: {
       title: 'BlogiNote Documentation',
       description: 'the documentation of BlogiNote.',
-      image: 'https://blogi-note-documentation.vercel.app/default-avatar.png',
-      favicon: 'https://blogi-note-documentation.vercel.app/default-favicon.ico',
+      image: 'https://bloginote-documentation.vercel.app/default-avatar.png',
+      favicon: 'https://bloginote-documentation.vercel.app/default-favicon.ico',
       copyright: `All rights reserved ${(new Date()).getFullYear()}, Benbinbin`
     },
     public: {

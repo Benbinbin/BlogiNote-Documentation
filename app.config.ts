@@ -5,7 +5,7 @@ export default defineAppConfig({
       name: 'BlogiNote Documentation',
       description: 'The documentation of BlogiNote, which is a Nuxt theme.',
       author: 'Benbinbin',
-      url: 'https://blogi-note-documentation.vercel.app/'
+      url: 'https://bloginote-documentation.vercel.app/'
     },
     author: 'Benbinbin',
     email: 'benthomsonbin@gmail.com',
