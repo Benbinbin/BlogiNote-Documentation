@@ -4,7 +4,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate && npx pagefind --source dist",
+    "generate": "nuxt generate && npx pagefind@1.1.1 --source dist",
     "preview": "nuxt preview"
   },
   "keywords": [
