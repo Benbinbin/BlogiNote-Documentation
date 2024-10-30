@@ -18,4 +18,4 @@ If you have any feedback, feel free to contact me with email :envelope: [benthom
 
 [![](/donate-banner/kofi.svg)](https://ko-fi.com/benbinbin)
 
-[![](/donate-banner/afdian.svg)](https://afdian.net/a/benbinbin)
+[![](/donate-banner/afdian.svg)](https://afdian.com/a/benbinbin)
