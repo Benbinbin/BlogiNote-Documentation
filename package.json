@@ -16,10 +16,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "bloginote": "3.2.2",
-    "nuxt": "3.13.2",
-    "@nuxt/eslint": "^0.6.1",
-    "eslint": "^9.13.0",
-    "typescript": "^5.6.3"
+    "bloginote": "3.2.3",
+    "nuxt": "3.13.2"
   }
 }
